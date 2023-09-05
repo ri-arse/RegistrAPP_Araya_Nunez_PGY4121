@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-img class="icon"
+    src="assets/img/iconRegistApp.png">
+  </ion-img>
+  <br>
+  <br>      <!--Estos br son para que tomen un poco de distancia la frase y el logo-->
+  <h1>Crea una cuenta de RegistApp</h1>
+  <br>
+  <br>      <!--Estos br son para que tomen un poco de distancia la frase y el logo-->
+  <form class="form">
+    <ion-item lines="full">
+      <ion-label button detail position="floating">Nombre</ion-label>
+      <ion-input type="text" placeholder="Pepe" name="nombre" required
+      [(ngModel)]="registrousuario.nombre"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item lines="full">
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input type="text" placeholder="Alba" name="apellido" required
+      [(ngModel)]="registrousuario.apellido"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" placeholder="pepe123@duocuc.cl" name="email" required
+      [(ngModel)]="registrousuario.email"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" placeholder="*********" name="password" required
+      [(ngModel)]="registrousuario.password"></ion-input>
+    </ion-item>
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" shape="round" button detail expand="block">Confirmar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

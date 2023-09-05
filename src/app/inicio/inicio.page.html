@@ -1,0 +1,32 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="showMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="success"></ion-icon>
+       
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form">
+  <ion-img class="icon"
+    src="assets/img/iconRegistApp.png">
+  </ion-img>
+  <br>
+  <h1>Bienvenid@ a RegistApp, Para Registrar la asistencia como docente debes iniciar sesión y luego generar el codigo QR para que tus alumn@s confirmen su asistencia. </h1>
+  <h2>En caso de que no poseas una cuenta aun, puedes crearte una usando el boton de abajo :) </h2>
+
+  <ion-grid class="grid">
+    <ion-row>
+      <ion-col align-self-center>
+        <ion-button [routerLink]="['/registro-usuario']" expand="block" shape="round" button detail>Registrarse</ion-button>
+        <br>
+        <span class="already">Registrate o Inicia sesión para ingresar a la aplicación</span>
+        <ion-button [routerLink]="['/login']" expand="block" shape="round" button detail>Iniciar sesión</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

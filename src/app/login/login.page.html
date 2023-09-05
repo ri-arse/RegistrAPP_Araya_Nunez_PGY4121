@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Inicio de Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-img class="icon"
+    src="assets/img/iconRegistApp.png">
+</ion-img>
+
+<ion-img class="iconuser"
+  src="assets/img/iconuser.png">
+</ion-img>
+  
+  <form class="form">
+    <ion-item button detail lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" placeholder="pepito123@duocuc.cl" name="email" required
+                [(ngModel)]="login.email"></ion-input>
+    </ion-item>
+    <br>
+    
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" placeholder="******" name="password" required
+                [(ngModel)]="login.password"></ion-input>
+    </ion-item>
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" shape="round" button detail expand="block">Iniciar sesión</ion-button>
+        <br>
+        <a id="olv" [routerLink]="['/restablecer-pass']"  class="small-text">¿Olvidaste la contraseña?</a>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

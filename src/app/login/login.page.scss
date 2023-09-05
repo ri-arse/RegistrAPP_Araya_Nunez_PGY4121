@@ -1,0 +1,53 @@
+.icon{
+    width: 300;
+    height: 240px;
+    margin: auto;
+    margin-top: 50px
+}
+
+
+.iconuser{
+    width: 200;
+    height: 140px;
+    margin: auto;
+    margin-top: 50px
+}
+
+#olv{
+    color: white;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.form{
+    width: 400px;
+    height: 340px;
+    margin: auto;
+    margin-top: 40px;
+
+}
+
+
+ion-item::part(native) {
+    background: rgba(63, 106, 122, 0.315);
+    color: #fff;
+  
+
+    border-width: 2px;
+    border-color: rgba(63, 106, 122, 0.315);
+    border-radius: 20px;
+  }
+  
+  ion-item::part(detail-icon) {
+    color: rgba(63, 106, 122, 0.315);
+    opacity: 1;
+    font-size: 20px;
+  }
+
+
