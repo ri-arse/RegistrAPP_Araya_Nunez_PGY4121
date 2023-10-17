@@ -2,31 +2,46 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button (click)="showMenu()">
-        <ion-icon slot="icon-only" name="menu-outline" color="success"></ion-icon>
-       
-      </ion-button>
+      <ion-menu-button auto-hide="false"></ion-menu-button>
     </ion-buttons>
-    <ion-title>Inicio</ion-title>
+    <ion-title>Log In | Alumno</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="auth-form">
+<ion-content [fullscreen]="true">
   <ion-img class="icon"
-    src="assets/img/iconRegistApp.png">
+      src="assets/img/iconRegistApp.png">
   </ion-img>
-  <br>
-  <h1>Bienvenid@ a RegistApp, Para Registrar la asistencia como docente debes iniciar sesión y luego generar el codigo QR para que tus alumn@s confirmen su asistencia. </h1>
-  <h2>En caso de que no poseas una cuenta aun, puedes crearte una usando el boton de abajo :) </h2>
+  
+  <ion-img class="iconuser"
+    src="assets/img/iconuser.png">
+  </ion-img>
 
-  <ion-grid class="grid">
+  <form [formGroup]="FormLogIn">
+    <ion-item button detail lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email"  formControlName="email" required
+                ></ion-input>
+    </ion-item>
+    <br>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" placeholder="******" formControlName="password" required
+                ></ion-input>
+    </ion-item>
+    <br>
     <ion-row>
-      <ion-col align-self-center>
-        <ion-button [routerLink]="['/registro-usuario']" expand="block" shape="round" button detail>Registrarse</ion-button>
+      <ion-col>
+        <ion-button type="submit" shape="round" button detail expand="block" (click)="Ingresar()">Iniciar sesión</ion-button>
         <br>
-        <span class="already">Registrate o Inicia sesión para ingresar a la aplicación</span>
-        <ion-button [routerLink]="['/login']" expand="block" shape="round" button detail>Iniciar sesión</ion-button>
+        <a id="olv" [routerLink]="['/restablecer-pass']"  class="small-text">¿Olvidaste la contraseña?</a>&nbsp;
+        &nbsp;
+        &nbsp;
+        <a id="olv" [routerLink]="['/registro-usuario']"  class="small-text">¿No tienes una cuenta?</a>
       </ion-col>
     </ion-row>
-  </ion-grid>
+  </form>
+    
+
 </ion-content>

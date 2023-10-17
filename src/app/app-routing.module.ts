@@ -20,10 +20,7 @@ const routes: Routes = [
     path: 'registro',
     loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   },
-  {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },
+  
   {
     path: 'registro-usuario',
     loadChildren: () => import('./registro-usuario/registro-usuario.module').then( m => m.RegistroUsuarioPageModule)
@@ -31,6 +28,35 @@ const routes: Routes = [
   {
     path: 'restablecer-pass',
     loadChildren: () => import('./restablecer-pass/restablecer-pass.module').then( m => m.RestablecerPassPageModule)
+  },
+
+  {
+    path: 'programacion',
+    loadChildren: () => import('./programacion/programacion.module').then( m => m.ProgramacionPageModule)
+  },
+  {
+    path: 'arquitectura',
+    loadChildren: () => import('./arquitectura/arquitectura.module').then( m => m.ArquitecturaPageModule)
+  },
+  {
+    path: 'basededatos',
+    loadChildren: () => import('./basededatos/basededatos.module').then( m => m.BasededatosPageModule)
+  },
+  {
+    path: 'home-alumno',
+    loadChildren: () => import('./home-alumno/home-alumno.module').then( m => m.HomeAlumnoPageModule)
+  },
+  {
+    path: 'login-docente',
+    loadChildren: () => import('./login-docente/login-docente.module').then( m => m.LoginDocentePageModule)
+  },
+  {
+    path: 'registro-docente',
+    loadChildren: () => import('./registro-docente/registro-docente.module').then( m => m.RegistroDocentePageModule)
+  },
+  {
+    path: 'feriados',
+    loadChildren: () => import('./feriados/feriados.module').then( m => m.FeriadosPageModule)
   },
 ];
 

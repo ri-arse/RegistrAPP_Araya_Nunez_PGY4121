@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Confirma tu asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img class="qrUser"
+    src="assets/img/qr.png">
+  </ion-img>
+  <ion-title>Escanea el codigo QR </ion-title>
+  <ion-button expand="block">Ingresar</ion-button>
+  <div class="Logout">
+    <ion-button color="danger" [routerLink]="['/inicio']" expand="block">Cerrar Sesion</ion-button>
+  </div>  
+</ion-content>
+
+

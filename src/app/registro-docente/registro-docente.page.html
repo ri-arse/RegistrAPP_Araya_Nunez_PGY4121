@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Registro | Docente</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-img class="icon"
+    src="assets/img/iconRegistApp.png">
+  </ion-img>
+  <br>
+  <br>      <!--Estos br son para que tomen un poco de distancia la frase y el logo-->
+  <h1>Crea una cuenta de Docente en RegistApp</h1>
+  <br>
+  <br>      <!--Estos br son para que tomen un poco de distancia la frase y el logo-->
+  <form [formGroup]="formDoc" (keyup.enter)="Registrarse1()">
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="nombre" formControlName="nombreD" name="nombre" required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" formControlName="passwordD"  required
+      ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" formControlName="emailD" name="email" required
+      ></ion-input>
+    </ion-item>
+    <ion-list>  
+      <ion-item class="AsigC" lines="full"  >
+        <ion-select  aria-label="asigN" [formGroup]="formDoc" formControlName="asigN" placeholder="Selecione 2 o mas asignaturas" [multiple]="true">
+          <ion-select-option  value="asig1">Arquitectura</ion-select-option>
+          <ion-select-option  value="asig2">Programacion</ion-select-option>
+          <ion-select-option  value="asig3">Base de datos</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="Registrarse1()">Ingresar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

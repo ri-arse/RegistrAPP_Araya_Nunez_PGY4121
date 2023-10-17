@@ -16,26 +16,46 @@ export class AppComponent {
 
   componentes : Componente[]=[
     {
-      name:'Inicio',
-      icon: 'home-outline',
+      name:'Login Alumno',
+      icon: 'accessibility-outline',
       redirecTo:'/inicio'   
     },
     {
-      name:'Acerca de',
-      icon: 'happy-outline',
-      redirecTo:'/about'   
+      name:'Registrarse | Alumno',
+      icon: 'person-add-outline',
+      redirecTo:'/registro-usuario'   
     },
+    
     {
-      name:'Registro de Asistencia',
-      icon: 'calendar-outline',
-      redirecTo:'/registro'   
+      name:'Login Docente',
+      icon: 'accessibility-outline',
+      redirecTo:'/login-docente'   
     },
 
     {
-      name:'Formulario',
-      icon: 'attach-outline',
-      redirecTo:'/formulario'   
+      name:'Registrarse | Docente',
+      icon: 'person-add-outline',
+      redirecTo:'/registro-docente'   
     },
+    
+    {
+      name:'Feriados',
+      icon:'calendar',
+      redirecTo:'/feriados',
+      
+    },
+    {
+      name:'About Us ',
+      icon:'happy-outline',
+      redirecTo:'/about'   
+    },
+
+
+    
+
+
+    
+    
 
 
 
